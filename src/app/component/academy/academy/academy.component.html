@@ -1,0 +1,137 @@
+<br>
+<h1>Edit Academy</h1>
+<br>
+<form #academyForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.$keyRegistro">
+
+  <label for="nombre"><b>Title</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.titulo">
+  <br>
+
+  <label for="telefono"><b>Section 2 - Box 1</b></label>
+  <input type="text" class="form-control" name="parte2_titulo" id="parte2_titulo" #parte2_titulo="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte2_titulo">
+  <textarea type="text" class="form-control" name="parte2" id="parte2" #parte2="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte2"></textarea>
+  <br>
+
+  <label for="telefono"><b>Section 2 - Box 2</b></label>
+  <textarea type="text" class="form-control" name="parte2_2" id="parte2_2" #parte2_2="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.parte2_2"></textarea>
+  <textarea type="text" class="form-control" name="parte2_2_2" id="parte2_2_2" #parte2_2_2="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte2_2_2"></textarea>
+  <label for="nombre"><b>Button</b></label>
+ <input type="text" class="form-control" name="boton" id="boton" #boton="ngModel"
+      [(ngModel)]="academyService.selectedAcademy.boton">
+  <br>
+
+  <label for="direccion"><b>Section 3</b></label>
+  <input type="text" class="form-control" name="parte3_titulo" id="parte3_titulo" #parte3_titulo="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte3_titulo">
+  <textarea type="text" class="form-control" name="parte3" id="parte3" #parte3="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte3"></textarea>
+  <textarea type="text" class="form-control" name="parte3_3" id="parte3_3" #parte3_3="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte3_3"></textarea>
+  <textarea type="text" class="form-control" name="parte3_3_3" id="parte3_3_3" #parte3_3_3="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte3_3_3"></textarea>
+    <label for=""><b>Image 1</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.image1"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 4</b></label>
+  <input type="text" class="form-control" name="parte4_titulo" id="parte4_titulo" #parte4_titulo="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte4_titulo">
+  <textarea type="text" class="form-control" name="parte4" id="parte4" #parte4="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte4"></textarea>
+    <label for=""><b>Image 2</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.image2"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+    </div>  
+  <!-- <input type="text" class="form-control" name="parte4_4" id="parte4_4" #parte4_4="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte4_4">
+  <textarea type="text" class="form-control" name="parte4_4_4" id="parte4_4_4" #parte4_4_4="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte4_4_4"></textarea> -->
+  <br>
+
+  <label for="direccion"><b>Section 5</b></label>
+  <input type="text" class="form-control" name="parte5_titulo" id="parte5_titulo" #parte5_titulo="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte5_titulo">
+  <textarea type="text" class="form-control" name="parte5" id="parte5" #parte5="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte5"></textarea>
+  <input type="text" class="form-control" name="parte5_5" id="parte5_5" #parte5_5="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte5_5">
+  <input type="text" class="form-control" name="parte5_5_5" id="parte5_5_5" #parte5_5_5="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte5_5_5">
+  <input type="text" class="form-control" name="parte5_5_5_5" id="parte5_5_5_5" #parte5_5_5_5="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte5_5_5_5">
+  <input type="text" class="form-control" name="parte5_5_5_5_5" id="parte5_5_5_5_5" #parte5_5_5_5_5="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte5_5_5_5_5">
+    <label for=""><b>Image 3</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload3($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage3 | async" name="image3" id="image3" #image3="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.image3"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent3 | async) +'%'"></div>
+    </div>  
+  <br>
+
+  <label for="direccion"><b>Section 6</b></label>
+  <input type="text" class="form-control" name="parte6_titulo" id="parte6_titulo" #parte6_titulo="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.parte6_titulo">
+  <textarea type="text" class="form-control" name="parte6" id="parte6" #parte6="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.parte6"></textarea>
+    <label for=""><b>Image 4</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload4($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage4 | async" name="image4" id="image4" #image4="ngModel"
+    [(ngModel)]="academyService.selectedAcademy.image4"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent4 | async) +'%'"></div>
+    </div>  
+
+  <br>
+
+  <label for="direccion"><b>Section 7</b></label>
+  <input type="text" class="form-control" name="parte7_titulo" id="parte7_titulo" #parte7_titulo="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.parte7_titulo">
+  <input type="text" class="form-control" name="parte7" id="parte7" #parte7="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.parte7">
+  <input type="text" class="form-control" name="parte7_7" id="parte7_7" #parte7_7="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.parte7_7">
+  <label for=""><b>Image 5</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload5($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage5 | async" name="image5" id="image5" #image5="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.image5"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent5 | async) +'%'"></div>
+  </div>  
+  <br>
+
+  <label for="direccion"><b>Section 8</b></label>
+  <input type="text" class="form-control" name="titulo8" id="titulo8" #titulo8="ngModel"
+  [(ngModel)]="academyService.selectedAcademy.titulo8">
+  <br>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(academyForm)">
+        Edit Academy
+      </button>
+
+    </div>
+  </div>
+
+  <br><br>
+
+
+</form>

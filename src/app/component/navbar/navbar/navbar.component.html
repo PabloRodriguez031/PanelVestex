@@ -1,0 +1,100 @@
+<br>
+<h1>Edit Menu</h1>
+<br>
+<form #navbarForm="ngForm">
+  
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.$keyRegistro">
+
+    <label for="nombre"><b>Phone Number</b></label>
+    <input type="text" class="form-control" name="telefono" id="telefono" #telefono="ngModel"
+      [(ngModel)]="navbarService.selectedNavbar.telefono">
+    <br>
+
+    <label for="nombre"><b>Email</b></label>
+    <input type="text" class="form-control" name="email" id="email" #email="ngModel"
+      [(ngModel)]="navbarService.selectedNavbar.email">
+    <br>
+
+  <label for="nombre"><b>Menu 1</b></label>
+  <input type="text" class="form-control" name="menu1" id="menu1" #menu1="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu1">
+  <br>
+
+  <label for="nombre"><b>Menu 2</b></label>
+  <input type="text" class="form-control" name="menu2" id="menu2" #menu2="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu2">
+  <br>
+  <label for="nombre"><b>SubMenu 2</b></label>
+  <input type="text" class="form-control" name="submenu2" id="submenu2" #submenu2="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu2">
+  <input type="text" class="form-control" name="submenu2_2" id="submenu2_2" #submenu2_2="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu2_2">
+  <input type="text" class="form-control" name="submenu2_3" id="submenu2_3" #submenu2_3="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu2_3">
+  <br>
+
+  <label for="nombre"><b>Menu 3</b></label>
+  <input type="text" class="form-control" name="menu3" id="menu3" #menu3="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu3">
+  <br>
+  <label for="nombre"><b>SubMenu 3</b></label>
+  <input type="text" class="form-control" name="submenu3" id="submenu3" #submenu3="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu3">
+  <input type="text" class="form-control" name="submenu3_2" id="submenu3_2" #submenu3_2="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu3_2">
+  <br>
+
+  
+  <label for="nombre"><b>Menu 4</b></label>
+  <input type="text" class="form-control" name="menu4" id="menu4" #menu4="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu4">
+  <br>
+  <label for="nombre"><b>SubMenu 4</b></label>
+  <input type="text" class="form-control" name="submenu4" id="submenu4" #submenu4="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu4">
+  <input type="text" class="form-control" name="submenu4_2" id="submenu4_2" #submenu4_2="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.submenu4_2">
+  <br>
+
+  <label for="nombre"><b>Menu 5</b></label>
+  <input type="text" class="form-control" name="menu5" id="menu5" #menu5="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu5">
+  <br>
+
+  <label for="nombre"><b>Menu 6</b></label>
+  <input type="text" class="form-control" name="menu6" id="menu6" #menu6="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu6">
+  <br>
+
+  <label for="nombre"><b>Menu 7</b></label>
+  <input type="text" class="form-control" name="menu7" id="menu7" #menu7="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu7">
+  <br>
+
+  <label for="nombre"><b>Menu 8</b></label>
+  <input type="text" class="form-control" name="menu8" id="menu8" #menu8="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu8">
+  <br>
+
+  <label for="nombre"><b>Menu 9</b></label>
+  <input type="text" class="form-control" name="menu9" id="menu9" #menu9="ngModel"
+    [(ngModel)]="navbarService.selectedNavbar.menu9">
+  <br>
+
+  
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(navbarForm)">
+        Edit Menu
+      </button>
+    </div>
+  </div>
+  
+
+  <br><br>
+
+
+</form>

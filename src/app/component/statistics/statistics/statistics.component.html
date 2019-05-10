@@ -1,0 +1,83 @@
+<br>
+<h1>Edit Statistics</h1>
+<br>
+<form #statisticsForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.$keyRegistro">
+
+  <label for="nombre"><b>Title</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.titulo">
+  <br>
+
+  <label for="telefono"><b>Section 2 - Title</b></label>
+  <input type="text" class="form-control" name="parte2_titulo" id="parte2_titulo" #parte2_titulo="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.parte2_titulo">
+  <input type="text" class="form-control" name="parte2_subtitulo" id="parte2_subtitulo" #parte2_subtitulo="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.parte2_subtitulo">
+  <textarea type="text" class="form-control" name="parte2_desc" id="parte2_desc" #parte2_desc="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.parte2_desc"></textarea>
+    <label for=""><b>Image 1</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.image1"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 </b></label>
+  <input type="text" class="form-control" name="parte3_titulo" id="parte3_titulo" #parte3_titulo="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.parte3_titulo">
+  <textarea type="text" class="form-control" name="parte3" id="parte3" #parteparte32_desc="ngModel"
+    [(ngModel)]="statisticsService.selectedStatistics.parte3"></textarea>
+  <br>
+
+  <label for=""><b>Image 2</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+  [(ngModel)]="statisticsService.selectedStatistics.image2"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+  </div>  
+
+  <label for=""><b>Image 3</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload3($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage3 | async" name="image3" id="image3" #image3="ngModel"
+  [(ngModel)]="statisticsService.selectedStatistics.image3"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent3 | async) +'%'"></div>
+  </div>  
+
+  <label for=""><b>Image 4</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload4($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage4 | async" name="image4" id="image4" #image4="ngModel"
+  [(ngModel)]="statisticsService.selectedStatistics.image4"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent4 | async) +'%'"></div>
+  </div>  
+
+  <label for=""><b>Image 5</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload5($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage5 | async" name="image5" id="image5" #image5="ngModel"
+  [(ngModel)]="statisticsService.selectedStatistics.image5"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent5 | async) +'%'"></div>
+  </div>  
+
+  <br>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(statisticsForm)">
+        Edit Statistics
+      </button>
+    </div>
+  </div>
+  
+
+  <br><br>
+
+
+</form>

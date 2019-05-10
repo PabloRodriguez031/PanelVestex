@@ -1,0 +1,193 @@
+<br>
+<h1>Edit Home</h1>
+<br>
+<form #homeForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="homeService.selectedHome.$keyRegistro">
+
+  <label for="nombre"><b>Slider</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+  [(ngModel)]="homeService.selectedHome.titulo">
+  <input type="text" class="form-control" name="parte1_titulo" id="parte1_titulo" #parte1_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte1_titulo">
+  <textarea type="text" class="form-control" name="parte1" id="parte1" #parte1="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte1"></textarea>
+  <label for=""><b>Button</b></label>
+  <input type="text" class="form-control" name="boton" id="boton" #boton="ngModel"
+  [(ngModel)]="homeService.selectedHome.boton">
+  <label for=""><b>Image 1</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+  [(ngModel)]="homeService.selectedHome.image1"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+  </div>
+  <label for=""><b>Image 2</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+  [(ngModel)]="homeService.selectedHome.image2"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+  </div>
+  <label for=""><b>Image 3</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload3($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage3 | async" name="image3" id="image3" #image3="ngModel"
+  [(ngModel)]="homeService.selectedHome.image3"><br>
+  <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent3 | async) +'%'"></div>
+  </div>
+  <br>
+
+  <label for="telefono"><b>Section 2 - Box 1</b></label>
+  <input type="text" class="form-control" name="parte2_titulo" id="parte2_titulo" #parte2_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte2_titulo">
+  <textarea type="text" class="form-control" name="parte2" id="parte2" #parte2="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte2"></textarea>
+    <label for=""><b>Button</b></label>
+    <input type="text" class="form-control" name="boton2" id="boton2" #boton2="ngModel"
+    [(ngModel)]="homeService.selectedHome.boton2">
+  <br>
+
+  <label for="telefono"><b>Section 2 - Box 2</b></label>
+  <input type="text" class="form-control" name="parte2_2_titulo" id="parte2_2_titulo" #parte2_2_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte2_2_titulo">
+  <textarea type="text" class="form-control" name="parte2_2" id="parte2_2" #parte2_2="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte2_2"></textarea>
+    <label for=""><b>Button</b></label>
+    <input type="text" class="form-control" name="boton2" id="boton2" #boton2="ngModel"
+    [(ngModel)]="homeService.selectedHome.boton2">
+  <br>
+
+  <label for="telefono"><b>Section 2 - Box 3</b></label>
+  <input type="text" class="form-control" name="parte2_2_2_titulo" id="parte2_2_2_titulo" #parte2_2_2_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte2_2_2_titulo">
+  <textarea type="text" class="form-control" name="parte2_2_2" id="parte2_2_2" #parte2_2_2="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte2_2_2"></textarea>
+    <label for=""><b>Button</b></label>
+    <input type="text" class="form-control" name="boton2" id="boton2" #boton2="ngModel"
+    [(ngModel)]="homeService.selectedHome.boton2">
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 1</b></label>
+  <input type="text" class="form-control" name="parte3_titulo" id="parte3_titulo" #parte3_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_titulo">
+  <textarea type="text" class="form-control" name="parte3" id="parte3" #parte3="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 2</b></label>
+  <input type="text" class="form-control" name="parte3_3_titulo" id="parte3_3_titulo" #parte3_3_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3" id="parte3_3" #parte3_3="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 3</b></label>
+  <input type="text" class="form-control" name="parte3_3_3_titulo" id="parte3_3_3_titulo" #parte3_3_3_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3_3" id="parte3_3_3" #parte3_3_3="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_3"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 5</b></label>
+  <input type="text" class="form-control" name="parte3_3_3_3_titulo" id="parte3_3_3_3_titulo" #parte3_3_3_3_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3_3_3" id="parte3_3_3_3" #parte3_3_3_3="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_3_3"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 6</b></label>
+  <input type="text" class="form-control" name="parte3_3_3_3_3_titulo" id="parte3_3_3_3_3_titulo" #parte3_3_3_3_3_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_3_3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3_3_3_3" id="parte3_3_3_3_3" #parte3_3_3_3_3="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte3_3_3_3_3"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 4 - Info 1</b></label>
+  <input type="text" class="form-control" name="parte4_titulo" id="parte4_titulo" #parte4_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_titulo">
+  <textarea type="text" class="form-control" name="parte4" id="parte4" #parte4="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 4 - Info 2</b></label>
+  <input type="text" class="form-control" name="parte4_4_titulo" id="parte4_4_titulo" #parte4_4_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_4_titulo">
+  <textarea type="text" class="form-control" name="parte4_4" id="parte4_4" #parte4_4="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_4"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 4 - Info 3</b></label>
+  <input type="text" class="form-control" name="parte4_4_4_titulo" id="parte4_4_4_titulo" #parte4_4_4_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_4_4_titulo">
+  <textarea type="text" class="form-control" name="parte4_4_4" id="parte4_4_4" #parte4_4_4="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_4_4"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 4 - Info 4</b></label>
+  <input type="text" class="form-control" name="parte4_4_4_4_titulo" id="parte4_4_4_4_titulo" #parte4_4_4_4_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_4_4_4_titulo">
+  <textarea type="text" class="form-control" name="parte4_4_4_4" id="parte4_4_4_4" #parte4_4_4_4="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte4_4_4_4"></textarea>
+    <label for=""><b>Image 4</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload4($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage4 | async" name="image4" id="image4" #image4="ngModel"
+    [(ngModel)]="homeService.selectedHome.image4"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent4 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 5</b></label>
+  <input type="text" class="form-control" name="parte5_titulo" id="parte5_titulo" #parte5_titulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte5_titulo">
+    <input type="text" class="form-control" name="parte5_subtitulo" id="parte5_subtitulo" #parte5_subtitulo="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte5_subtitulo">
+  <textarea type="text" class="form-control" name="parte5" id="parte5" #parte5="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte5"></textarea>
+    <label for=""><b>Button</b></label>
+    <input type="text" class="form-control" name="boton3" id="boton3" #boton3="ngModel"
+    [(ngModel)]="homeService.selectedHome.boton3">
+    <label for=""><b>Image 5</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload5($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage5 | async" name="image5" id="image5" #image5="ngModel"
+    [(ngModel)]="homeService.selectedHome.image5"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent5 | async) +'%'"></div>
+    </div>
+  <br>
+  <label for="direccion"><b>Section 6</b></label>
+  <textarea type="text" class="form-control" name="parte6" id="parte6" #parte6="ngModel"
+    [(ngModel)]="homeService.selectedHome.parte6"></textarea>
+    <label for=""><b>Button</b></label>
+    <input type="text" class="form-control" name="boton4" id="boton4" #boton4="ngModel"
+    [(ngModel)]="homeService.selectedHome.boton4">
+    <label for=""><b>Image 6</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload6($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage6 | async" name="image6" id="image6" #image6="ngModel"
+    [(ngModel)]="homeService.selectedHome.image6"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent6 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 7</b></label>
+    <input type="text" class="form-control" name="titulo7" id="titulo7" #boton4="ngModel"
+    [(ngModel)]="homeService.selectedHome.titulo7">
+  <br>
+
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(homeForm)">
+        Edit Home
+      </button>
+
+    </div>
+  </div>
+
+  <br><br>
+
+
+</form>

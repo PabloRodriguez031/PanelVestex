@@ -1,0 +1,58 @@
+<br>
+<h1>Edit Newsletter</h1>
+<br>
+<form #newsForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="newsService.selectedNews.$keyRegistro">
+
+  <label for="nombre"><b>Title</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+    [(ngModel)]="newsService.selectedNews.titulo">
+  <label for=""><b>Image 1</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+  [(ngModel)]="newsService.selectedNews.image1"><br>
+  <div class="progress">  
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+  </div>
+  <br>
+
+  <label for="telefono"><b>Section 2 - Title</b></label>
+  <input type="text" class="form-control" name="parte2_titulo" id="parte2_titulo" #parte2_titulo="ngModel"
+    [(ngModel)]="newsService.selectedNews.parte2_titulo">
+  <br>
+
+  <label for="direccion"><b>Section 2 - Title 2</b></label>
+  <input type="text" class="form-control" name="parte2_titulo_2" id="parte2_titulo_2" #parte2_titulo_2="ngModel"
+    [(ngModel)]="newsService.selectedNews.parte2_titulo_2">   
+  <br>
+
+  <label for="direccion"><b>Section 3 - Title</b></label>
+  <input type="text" class="form-control" name="parte3_titulo" id="parte3_titulo" #parte3_titulo="ngModel"
+    [(ngModel)]="newsService.selectedNews.parte3_titulo">
+  <br>
+
+  <label for="direccion"><b>Section 3 - Title 2</b></label>
+  <input type="text" class="form-control" name="parte3_titulo_2" id="parte3_titulo_2" #parte3_titulo_2="ngModel"
+    [(ngModel)]="newsService.selectedNews.parte3_titulo_2">
+  <br>
+
+  <label for="direccion"><b>Section 4 - Title</b></label>
+  <input type="text" class="form-control" name="parte4_titulo" id="parte4_titulo" #parte4_titulo="ngModel"
+    [(ngModel)]="newsService.selectedNews.parte4_titulo">
+  <br>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(newsForm)">
+        Edit Newsletter
+      </button>
+    </div>
+  </div>
+  
+
+  <br><br>
+
+
+</form>

@@ -1,0 +1,111 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+
+<div class="wrap">
+
+  <div class="row">
+
+    <div class="col-md-3">
+      <app-homelist  *ngIf="loadedFeature === 'Home'" ></app-homelist>
+    </div>
+
+    <div class="col-md-9">
+      <app-home  *ngIf="loadedFeature === 'Home'" ></app-home>
+    </div>
+    
+    <div class="col-md-3">
+      <app-aboutlist  *ngIf="loadedFeature === 'About'"></app-aboutlist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-about  *ngIf="loadedFeature === 'About'"></app-about>
+    </div>
+
+    <div class="col-md-3">
+      <app-servicelist  *ngIf="loadedFeature === 'Service'"></app-servicelist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-service  *ngIf="loadedFeature === 'Service'"></app-service>
+    </div>
+
+    <div class="col-md-3">
+      <app-academylist  *ngIf="loadedFeature === 'Academy'"></app-academylist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-academy  *ngIf="loadedFeature === 'Academy'"></app-academy>
+    </div>
+
+    <div class="col-md-3">
+      <app-newslist  *ngIf="loadedFeature === 'News'"></app-newslist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-news  *ngIf="loadedFeature === 'News'"></app-news>
+    </div>
+
+    <div class="col-md-3">
+      <app-contactlist  *ngIf="loadedFeature === 'Contact'"></app-contactlist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-contact  *ngIf="loadedFeature === 'Contact'"></app-contact>
+    </div>
+
+    <div class="col-md-3">
+      <app-productslist  *ngIf="loadedFeature === 'Products'"></app-productslist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-products  *ngIf="loadedFeature === 'Products'"></app-products>
+    </div>
+
+    <div class="col-md-3">
+      <app-statisticslist  *ngIf="loadedFeature === 'Statistics'"></app-statisticslist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-statistics  *ngIf="loadedFeature === 'Statistics'"></app-statistics>
+    </div>
+
+    <div class="col-md-3">
+      <app-funtejerlist  *ngIf="loadedFeature === 'Funtejer'"></app-funtejerlist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-funtejer  *ngIf="loadedFeature === 'Funtejer'"></app-funtejer>
+    </div>
+
+    <div class="col-sm-12">
+      <app-homevista *ngIf="loadedFeature === 'vistaHome'"></app-homevista>
+    </div>
+    
+    <div class="col-md-3">
+      <app-directorylist  *ngIf="loadedFeature === 'Directory'"></app-directorylist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-directory  *ngIf="loadedFeature === 'Directory'"></app-directory>
+    </div>    
+
+    <div class="col-md-3">
+      <app-navbarlist  *ngIf="loadedFeature === 'Menu'"></app-navbarlist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-navbar  *ngIf="loadedFeature === 'Menu'"></app-navbar>
+    </div>
+    
+    <div class="col-md-3">
+      <app-footerlist  *ngIf="loadedFeature === 'Footer'"></app-footerlist>
+    </div>
+    
+    <div class="col-md-9">
+      <app-footer  *ngIf="loadedFeature === 'Footer'"></app-footer>
+    </div>
+    
+
+    
+  </div>
+
+</div>

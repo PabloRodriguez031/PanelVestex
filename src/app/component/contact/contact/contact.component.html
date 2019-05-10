@@ -1,0 +1,61 @@
+<br>
+<h1>Edit Contact</h1>
+<br>
+<form #contactForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="contactService.selectedContact.$keyRegistro">
+
+    <label for="nombre"><b>Title</b></label>
+    <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+      [(ngModel)]="contactService.selectedContact.titulo">
+      <label for=""><b>Image 1</b></label><br>
+      <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+      <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+      [(ngModel)]="contactService.selectedContact.image1"><br>
+      <div class="progress">  
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+      </div>
+    <br>
+
+    <label for="nombre"><b>Title 2</b></label>
+    <input type="text" class="form-control" name="titulo2" id="titulo2" #titulo2="ngModel"
+      [(ngModel)]="contactService.selectedContact.titulo2">
+    <br>
+
+    <label for="nombre"><b>Phone Number</b></label>
+    <input type="text" class="form-control" name="telefono" id="telefono" #telefono="ngModel"
+      [(ngModel)]="contactService.selectedContact.telefono">
+    <br>
+
+  <label for="telefono"><b>Email</b></label>
+  <input type="text" class="form-control" name="email" id="email" #email="ngModel"
+    [(ngModel)]="contactService.selectedContact.email">
+
+  <br>
+
+  <label for="telefono"><b>Address</b></label>
+  <input type="text" class="form-control" name="direccion" id="direccion" #direccion="ngModel"
+    [(ngModel)]="contactService.selectedContact.direccion">
+  <br>
+  <label for=""><b>Image 2</b></label><br>
+  <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+  <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+  [(ngModel)]="contactService.selectedContact.image2"><br>
+  <div class="progress">  
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+  </div>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(contactForm)">
+        Edit Home
+      </button>
+
+    </div>
+  </div>
+
+  <br><br>
+
+
+</form>

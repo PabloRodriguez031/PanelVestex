@@ -1,0 +1,67 @@
+<br>
+<h1>Edit Funtejer</h1>
+<br>
+<form #funtejerForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.$keyRegistro">
+
+  <label for="direccion"><b>Main Title</b></label>
+  <input type="text" class="form-control" name="titulo_principal" id="titulo_principal" #titulo_principal="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.titulo_principal">
+    <label for=""><b>Image 1</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.image1"><br>
+    <div class="progress">  
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="nombre"><b>Title</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.titulo">
+  <textarea type="text" class="form-control" name="desc" id="desc" #desc="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.desc"></textarea>
+  <input type="text" class="form-control" name="lista_1" id="lista_1" #lista_1="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.lista_1">
+    <input type="text" class="form-control" name="lista_2" id="lista_2" #lista_2="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.lista_2">
+    <input type="text" class="form-control" name="lista_3" id="lista_3" #lista_3="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.lista_3">
+    <input type="text" class="form-control" name="lista_4" id="lista_4" #lista_4="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.lista_4">
+  <br>
+
+  <label for="direccion"><b>Section 2 - Description</b></label>
+  <input type="text" class="form-control" name="desc_2" id="desc_2" #desc_2="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.desc_2">
+  <br>
+
+  <label for="direccion"><b>Section 2 - Button</b></label>
+  <input type="text" class="form-control" name="boton" id="boton" #boton="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.boton">
+
+    <label for=""><b>Image 2</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+    [(ngModel)]="funtejerService.selectedFuntejer.image2"><br>
+    <div class="progress">  
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(funtejerForm)">
+        Edit Funtejer
+      </button>
+    </div>
+  </div>
+  
+
+  <br><br>
+
+
+</form>
+

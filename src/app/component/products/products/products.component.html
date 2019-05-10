@@ -1,0 +1,182 @@
+<br>
+<h1>Edit Products</h1>
+<br>
+<form #productsForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+  [(ngModel)]="productsService.selectedProducts.$keyRegistro">
+
+  <label for="nombre"><b>Title</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+    [(ngModel)]="productsService.selectedProducts.titulo">
+
+    <label for=""><b>Image 1</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image1"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+    </div>   
+  <br>
+
+  <label for="telefono"><b>Section 2 - Description</b></label>
+  <input type="text" class="form-control" name="parte2_2_titulo" id="parte2_2_titulo" #parte2_2_titulo="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte2_2_titulo">
+  <textarea type="text" class="form-control" name="parte2_2" id="parte2_2" #parte2_2="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte2_2"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 2 - Button</b></label>
+  <input type="text" class="form-control" name="parte2_boton" id="parte2_boton" #parte2_boton="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte2_boton">
+
+    <label for=""><b>Image 2</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image2"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 1</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc" id="parte5_desc" #parte5_desc="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo" id="parte5_titulo" #parte5_titulo="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo">
+    <label for=""><b>Image 3</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload3($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage3 | async" name="image3" id="image3" #image3="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image3"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent3 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 2</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_2" id="parte5_desc_2" #parte5_desc_2="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_2"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_2" id="parte5_titulo_2" #parte5_titulo_2="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_2">
+    <label for=""><b>Image 4</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload4($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage4 | async" name="image4" id="image4" #image4="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image4"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent4 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 3</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_3" id="parte5_desc_3" #parte5_desc_3="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_3"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_3" id="parte5_titulo_3" #parte5_titulo_3="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_3">
+    <label for=""><b>Image 5</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload5($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage5 | async" name="image5" id="image5" #image5="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image5"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent5 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 4</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_4" id="parte5_desc_4" #parte5_desc_4="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_4"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_4" id="parte5_titulo_4" #parte5_titulo_4="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_4">
+    <label for=""><b>Image 6</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload6($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage6 | async" name="image6" id="image6" #image6="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image6"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent6 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 5</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_5" id="parte5_desc_5" #parte5_desc_5="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_5"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_5" id="parte5_titulo_5" #parte5_titulo_5="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_5">
+    <label for=""><b>Image 7</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload7($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage7 | async" name="image7" id="image7" #image7="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image7"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent7 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 6</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_6" id="parte5_desc_6" #parte5_desc_6="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_6"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_6" id="parte5_titulo_6" #parte5_titulo_6="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_6">
+    <label for=""><b>Image 8</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload8($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage8 | async" name="image8" id="image8" #image8="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image8"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent8 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 7</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_7" id="parte5_desc_7" #parte5_desc_7="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_7"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_7" id="parte5_titulo_7" #parte5_titulo_7="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_7">
+    <label for=""><b>Image 9</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload9($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage9 | async" name="image9" id="image9" #image9="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image9"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent9 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 8</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_8" id="parte5_desc_8" #parte5_desc_8="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_8"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_8" id="parte5_titulo_8" #parte5_titulo_8="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_8">
+    <label for=""><b>Image 10</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload10($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage10 | async" name="image10" id="image10" #image10="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image10"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent10 | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Box 9</b></label>
+  <textarea type="text" class="form-control" name="parte5_desc_9" id="parte5_desc_9" #parte5_desc_9="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_desc_9"></textarea>
+  <input type="text" class="form-control" name="parte5_titulo_9" id="parte5_titulo_9" #parte5_titulo_9="ngModel"
+    [(ngModel)]="productsService.selectedProducts.parte5_titulo_9">
+        <label for=""><b>Image 11</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload11($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage11 | async" name="image11" id="image11" #image11="ngModel"
+    [(ngModel)]="productsService.selectedProducts.image11"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent11 | async) +'%'"></div>
+    </div>
+  <br>
+
+
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(productsForm)">
+        Edit Products
+      </button>
+
+    </div>
+  </div>
+
+  <br><br>
+
+
+</form>

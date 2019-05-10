@@ -1,0 +1,14 @@
+<br><br>
+
+<table class="table table-bordered">
+
+  <tr *ngFor="let servicelista of serviceList">
+    <td>Edit Service</td>
+    <td>
+      <button type="button" (click)="onEdit(servicelista)" class="btn btn-outline-danger btn-sm">
+        Edit
+      </button>
+    </td>
+  </tr>
+
+</table>

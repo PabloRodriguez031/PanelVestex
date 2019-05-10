@@ -1,0 +1,96 @@
+<br>
+<h1>Edit Service</h1>
+<br>
+<form #serviceForm="ngForm">
+
+  <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel"
+    [(ngModel)]="serviceService.selectedService.$keyRegistro">
+
+  <label for="nombre"><b>Title</b></label>
+  <input type="text" class="form-control" name="titulo" id="titulo" #titulo="ngModel"
+    [(ngModel)]="serviceService.selectedService.titulo">
+    <label for=""><b>Image 1</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage | async" name="image1" id="image1" #image1="ngModel"
+    [(ngModel)]="serviceService.selectedService.image1"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent | async) +'%'"></div>
+    </div>
+  <br>
+
+  <label for="telefono"><b>Section 2 - Title</b></label>
+  <input type="text" class="form-control" name="parte2_titulo" id="parte2_titulo" #parte2_titulo="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte2_titulo">
+  <textarea type="text" class="form-control" name="parte2_2" id="parte2_2" #parte2_2="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte2_2"></textarea>
+  <br>
+
+  <label for="direccion"><b>Section 3 - Title</b></label>
+  <input type="text" class="form-control" name="parte3_titulo" id="parte3_titulo" #parte3_titulo="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_titulo">
+    <textarea type="text" class="form-control" name="parte3" id="parte3" #parte3="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3"></textarea>  
+    <label for=""><b>Image 2</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload2($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage2 | async" name="image2" id="image2" #image2="ngModel"
+    [(ngModel)]="serviceService.selectedService.image2"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent2 | async) +'%'"></div>
+    </div>  
+  <br>
+
+  <label for="direccion"><b>Section 3 - Title 2</b></label>
+  <input type="text" class="form-control" name="parte3_3_titulo" id="parte3_3_titulo" #parte3_3_titulo="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3" id="parte3_3" #parte3_3="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_3"></textarea>
+    <label for=""><b>Image 3</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload3($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage3 | async" name="image3" id="image3" #image3="ngModel"
+    [(ngModel)]="serviceService.selectedService.image3"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent3 | async) +'%'"></div>
+    </div>  
+  <br>
+
+  <label for="direccion"><b>Section 3 - Title 3</b></label>
+  <input type="text" class="form-control" name="parte3_3_3_titulo" id="parte3_3_3_titulo" #parte3_3_3_titulo="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3_3" id="parte3_3_3" #parte3_3_3="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_3_3"></textarea>
+    <label for=""><b>Image 4</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload4($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage4 | async" name="image4" id="image4" #image4="ngModel"
+    [(ngModel)]="serviceService.selectedService.image4"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent4 | async) +'%'"></div>
+    </div>  
+  <br>
+
+  <label for="direccion"><b>Section 3 - Title 4</b></label>
+  <input type="text" class="form-control" name="parte3_3_3_3_titulo" id="parte3_3_3_3_titulo" #parte3_3_3_3_titulo="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_3_3_3_titulo">
+  <textarea type="text" class="form-control" name="parte3_3_3_3" id="parte3_3_3_3" #parte3_3_3_3="ngModel"
+    [(ngModel)]="serviceService.selectedService.parte3_3_3_3"></textarea>
+    <label for=""><b>Image 5</b></label><br>
+    <input type="file" accept=".jpeg, .jpg, .png" (change)="onUpload5($event)"><br><br>
+    <input type="text" class="form-control" [value]="urlImage5 | async" name="image5" id="image5" #image5="ngModel"
+    [(ngModel)]="serviceService.selectedService.image5"><br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadPercent5 | async) +'%'"></div>
+    </div>  
+  <br>
+
+  <div class="text-center">
+    <div class="btn-group btn-group-sm  text-center">
+      <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(serviceForm)">
+        Edit Service
+      </button>
+    </div>
+  </div>
+  
+
+  <br><br>
+
+
+</form>
